@@ -1,0 +1,32 @@
+@import "./variables";
+
+@mixin primaryButton {
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  color: $whiteText;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+@mixin secondaryButton {
+  margin: 10px 0;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  color: $whiteText;
+  background-color: $primary;
+  border: 1px solid white;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondaryBlue;
+  }
+}

@@ -1,0 +1,47 @@
+.client__text {
+  max-width: 800px;
+}
+.tns-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+
+  button {
+    width: 30px;
+    height: 1px;
+    margin: 0 5px;
+
+    &:active {
+      border: 1px solid $primary;
+    }
+  }
+}
+
+.controls {
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (min-width: 991px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    z-index: 1;
+    justify-content: space-between;
+    transform: translateY(-300px);
+  }
+
+  .previous {
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  .next {
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+}

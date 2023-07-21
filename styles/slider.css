@@ -1,0 +1,130 @@
+{% import '../../css/tools/_macros.css' as macro %}
+
+.slider,
+.slider .container,
+.slider .container-fluid {
+    position: relative;
+}
+
+.slider:not(.tns-slider) .slide__item:not(:first-child) {
+    display: none;
+}
+.slider .slide__item:first-child {
+  /*padding: 0 20px;*/
+}
+
+.slider .tns-horizontal.tns-subpixel>.tns-item {
+    display: inline-block !important;
+}
+
+.slider-nav {
+
+    z-index: 3;
+
+    text-align: center;
+    margin-top: calc(var(--grid-gutter) / 2);
+}
+
+.slider-nav button {
+    padding: 0;
+    margin: 0 var(--slider-pagination-bullet-horizontal-gap) 0 0;
+    background: var(--slider-pagination-bullet-inactive-color);
+    opacity: var(--slider-pagination-bullet-inactive-opacity);
+    height: var(--slider-pagination-bullet-height);
+    width: var(--slider-pagination-bullet-width);
+    border-radius: var(--slider-pagination-bullet-radius);
+}
+.slider-nav button.tns-nav-active {
+    background: var(--slider-pagination-color);
+    height: var(--slider-pagination-bullet-active-height);
+    width: var(--slider-pagination-bullet-active-width);
+    border-radius: var(--slider-pagination-bullet-active-radius);
+    opacity: 1;
+}
+.slider-nav button:last-of-type {
+    margin-right: 0;
+}
+
+.slider.slider--highlighted .slide__item > *:first-of-type {
+    margin-bottom: var(--grid-gutter);
+    margin-top: var(--grid-gutter);
+}
+
+.slider.slider--highlighted .tns-slider .slide__item {
+    z-index: 2;
+    position: relative;
+    -webkit-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+}
+@media (min-width: {{ macro.breakpoint_tablet() }}) {
+    .slider.slider--highlighted .tns-slider .slider__item--highlighted {
+        transform: scale(1.25);
+        z-index: 3;
+    }
+
+}
+
+.slider:not(.tns-slider) {
+    display: flex;
+    overflow: hidden;
+}
+.slider:not(.tns-slider) .slide__item {
+    flex-shrink: 0;
+    width: 100%;
+}
+.slider--highlighted .slide__item .card--teaser .card__header .element-header{
+    color: #fff;
+}
+
+.slider--highlighted .slide__item  .card .card__image:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+
+.tns-controls > button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    background: transparent;
+    border-color: transparent;
+    border-width: 1px;
+    color: var(--slider-navigation-color);
+}
+.tns-controls > button:after {
+    font-family: slider-icons;
+    font-size: var(--slider-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1
+}
+
+.tns-controls > button[data-controls="prev"] {
+    left: var(--slider-button-prev-left);
+    right: auto;
+}
+
+.tns-controls > button[data-controls="prev"]:after {
+    content: 'prev'
+}
+
+.tns-controls > button[data-controls="next"] {
+    right: var(--slider-button-prev-right);
+    left: auto;
+}
+
+.tns-controls > button[data-controls="next"]:after {
+    content: 'next'
+}

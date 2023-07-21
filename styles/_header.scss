@@ -1,0 +1,30 @@
+@import "./variables";
+@import "./mixin";
+
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.nav-item {
+  @media (max-width: 991px) {
+    border-bottom: 1px solid $secondary;
+    padding: 15px 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.header-line {
+  width: 1px;
+  height: 20px;
+  background-color: #fff;
+
+  @media (max-width: 575px) {
+    display: none;
+  }
+}

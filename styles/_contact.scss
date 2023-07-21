@@ -1,0 +1,105 @@
+@import "./variables";
+@import "./mixin";
+
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  &--howweare {
+    padding: 20px;
+  }
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact__info {
+    max-width: 450px;
+    margin-left: 12px;
+    &--title {
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+
+    .line {
+      width: 100px;
+      height: 2px;
+      margin: 20px 0;
+      background-color: black;
+    }
+
+    .contact__image {
+      background-color: $primary;
+      width: 75px;
+      height: 75px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &--logo {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .contact__form {
+    max-width: 450px;
+
+    &--group {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--field {
+      width: 100%;
+      margin: 10px 0;
+      padding: 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.3rem;
+      background-color: $inputBg;
+      font-family: "Inter", sans-serif;
+      resize: none;
+      outline: none;
+    }
+
+    &--fieldTwo {
+      width: 100%;
+      margin: 10px 0;
+      margin-left: 4px;
+      padding: 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.3rem;
+      background-color: $inputBg;
+      font-family: "Inter", sans-serif;
+      resize: none;
+      outline: none;
+    }
+  }
+}
+
+.kontakt {
+  padding-top: 150px;
+  @media (max-width: 991px) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .kontakt__form {
+    @media (max-width: 991px) {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+.ansprechpartner {
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+}

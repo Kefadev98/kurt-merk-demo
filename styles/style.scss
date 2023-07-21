@@ -1,0 +1,66 @@
+@import "./fonts";
+@import "./variables";
+@import "./mixin";
+@import "./header";
+@import "./product";
+@import "./news";
+@import "./clients";
+@import "./contact";
+@import "./footer";
+@import "./values";
+@import "./history";
+@import "./specialists";
+@import "./models";
+@import "./benefits";
+@import "./tiny";
+@import "./jobs";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100%;
+  padding: 150px 0;
+  background-image: url("../assets/mainbackground.jpg");
+
+  // &--home {
+  //   background-image: url("../assets/mainbackground.jpg");
+  // }
+  // &--howweare {
+  //   background-image: url("../assets/howWeAreBg.jpg");
+  // }
+  // &--whatwedo {
+  //   background-image: url("../assets/whatWeDoBg.jpg");
+  // }
+  background-position: left;
+  background-size: cover;
+
+  .main-content {
+    max-width: 600px;
+
+    &--howweare {
+      max-width: 630px;
+    }
+
+    &--workpage {
+      padding: 300px 0;
+    }
+  }
+}
+
+.about__content {
+  max-width: 500px;
+
+  .about__paragraph {
+    font-size: 1.1rem;
+  }
+}
